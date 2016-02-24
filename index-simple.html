@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular国际化测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="index-simple.js"></script>
+</head>
+
+<body ng-app="MyApp">
+    <div ng-controller="indexCtrl" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+               <h1>{{ 'title' | translate }}</h1>
+            </div>
+            <div class="col-xs-12 well">
+               <span translate="foo"></span>
+            </div>
+            <div class="col-xs-12">
+               <button ng-click="changeLanguage('zh')" translate="BUTTON_LANG_ZH" class="btn btn-default"></button>
+               <button ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN" class="btn btn-default"></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
